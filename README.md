@@ -5,6 +5,8 @@ example: ![Task 1](/images/Task1.png)
 
 ##### Task_2) Binary Tree Traversal: write a program to perform InOrder tree traversal in [Binary Tree](https://en.wikipedia.org/wiki/Tree_traversal).
 	
+###	Program Execution Steps
+
 ####	Step 0: 
 			open the command prompt (Click the Start button (Windows)--> type cmd -->select and open the "Command prombt" )
 ####	Step 1: 
@@ -13,6 +15,8 @@ example: ![Task 1](/images/Task1.png)
 			> cd CodingTest/task_2/binarytree
 ####	Step 3: 
 			> javac InOrderBinaryTreeTraversal.java
+####	Step 4: 
+			> java InOrderBinaryTreeTraversal
 			
 			In Order Traversal Binary Tree Input: 45
 			In Order Traversal Binary Tree Input: 25
@@ -23,11 +27,11 @@ example: ![Task 1](/images/Task1.png)
 			
 			In Order Traversal Binary Tree:
 
-###			--------------------------------
+####						--------------------------------
 					15 25 35 45 75
-###			--------------------------------
+####					--------------------------------
 
-###			---------Codded By Ramesh-------
+###					---------Codded By Ramesh-------
 	
 
 
