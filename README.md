@@ -25,13 +25,12 @@ example: ![Task 1](/images/Task1.png)
 			In Order Traversal Binary Tree Input: 35
 
 			
-			In Order Traversal Binary Tree:
+			In Order Traversal Binary Tree Output:
 
-####						--------------------------------
 					15 25 35 45 75
-####					--------------------------------
 
-###					---------Coded By Ramesh-------
+
+###					-Coded By Ramesh-
 	
 
 
