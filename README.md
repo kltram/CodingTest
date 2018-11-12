@@ -31,7 +31,7 @@ example: ![Task 1](/images/Task1.png)
 					15 25 35 45 75
 ####					--------------------------------
 
-###					---------Codded By Ramesh-------
+###					---------Coded By Ramesh-------
 	
 
 
