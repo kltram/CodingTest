@@ -12,27 +12,32 @@ example: ![Task 1](/images/Task1.png)
 ####	Step 1: 
 			> git clone https://github.com/kltram/CodingTest
 ####	Step 2: 
-			> cd CodingTest/task_2/binarytree
+			> cd CodingTest\task2\binarytree>
 ####	Step 3: 
-			> javac InOrderBinaryTreeTraversal.java
+			>  CodingTest\task2\binarytree> javac InOrderBinaryTreeTraversal.java
 ####	Step 4: 
-			> java InOrderBinaryTreeTraversal
+			> CodingTest\task2\binarytree> java InOrderBinaryTreeTraversal
 			
-			In Order Traversal Binary Tree Input: 45
-			In Order Traversal Binary Tree Input: 25
-			In Order Traversal Binary Tree Input: 75
-			In Order Traversal Binary Tree Input: 15
-			In Order Traversal Binary Tree Input: 35
+####			Please enter number of node size :
+					5
+####			Please enter node array elements value
+					45
+					25
+					75
+					15
+					35
+####			The Node array input values from user is :
+					[45, 25, 75, 15, 35]
 
-			
-			In Order Traversal Binary Tree:
+				--------------------------------
 
-####						--------------------------------
-					15 25 35 45 75
-####					--------------------------------
+####			In Order Traversal Binary Tree Output:
 
-###					---------Codded By Ramesh-------
-	
+				--------------------------------
+####			15 25 35 45 75
+				--------------------------------
+
+####			---------Coded By Ramesh-------
 
 
 Note: Use any Programming Language that you are famillar with. Share your code as a Github link. Please do not copy complete code from any other source, cite for any rephasing of your code. If you have any querries email us, directly.
