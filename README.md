@@ -17,7 +17,7 @@ example: ![Task 1](/images/Task1.png)
 			>  CodingTest\task2\binarytree> javac InOrderBinaryTreeTraversal.java
 ####	Step 4: 
 			> CodingTest\task2\binarytree> java InOrderBinaryTreeTraversal
-			
+
 ####			Please enter number of node size :
 					5
 ####			Please enter node array elements value
