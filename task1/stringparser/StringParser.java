@@ -1,3 +1,8 @@
+/**
+ * 
+ */
+ 
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -23,7 +28,7 @@ import java.util.regex.Pattern;
 public class StringParser {
 
 	private static final String CONFIG_FILE = "whitelist.txt";
-	static List<String> invItem = new ArrayList<String>();
+	static List<String> items = new ArrayList<String>();
 
 	/**
 	 * @param args
@@ -49,11 +54,11 @@ public class StringParser {
 			String st;
 			// Read the data from Whitelist.txt
 			while ((st = br.readLine()) != null)
-				invItem.add(st);
+				items.add(st);
 			// close file stream 
 			br.close();
-			if (invItem.size() != 0 && invItem != null) {
-				toPrintTheMatchedOutput(invItem, strInput);
+			if (items.size() != 0 && items != null) {
+				toPrintTheMatchedOutput(items, strInput);
 			} else {
 				System.out.println("White file is empty");
 			}
@@ -67,36 +72,48 @@ public class StringParser {
 
 	}
 
-	private static void toPrintTheMatchedOutput(List<String> invItem,
+	private static void toPrintTheMatchedOutput(List<String> items,
 			String strInput) {
 		//pattern
-		Pattern pattern = Pattern.compile("\\s*(\\{.+?})\\s");
+		Pattern pattern = Pattern.compile("\\s*(\\{.+?})\\s*");
 		List<String> finalValue = new ArrayList<String>();
-		for (String mydata : invItem) {
-			Matcher matcher = pattern.matcher(mydata);
+		for (String item : items) {
+			Matcher matcher = pattern.matcher(item);
 			if (matcher.find()) {
 				String str = matcher.group(1);
-				String str1 = mydata.replace("'", "");
-				str1 = mydata.replaceAll("\\s+", " ");
-				String numerics = str1.replace(str.trim(), "");
-				numerics = numerics.trim().replaceAll("\\s{2,}", " ");
-				String arr = missingWords(strInput, numerics);
+				
+				String str1 = item.replace("'", "");
+				str1 = item.replaceAll("\\s+", " ");
+				String strRemoved = str1.replace(str.trim(), "");
+				strRemoved = strRemoved.trim().replaceAll("\\s{4,}", "");
+				strRemoved = strRemoved.replaceAll("\\s+", " ");
+				String arr = missingWords(strInput, strRemoved);
 				finalValue.add(arr);
 			}
 		}
+		
+		 String strTockenValue = finalValue.get(0);
+
+		    for (String element : finalValue) {
+		        if (element.length() < strTockenValue.length()) {
+		        	strTockenValue = element;
+		        }
+		    }
+
 		System.out
 				.println("\nThe expected returns token value from the user response\n");
 		System.out
 				.println("-------------------------------------------------------\n");
-		System.out.println("\t\t" + finalValue);
+		System.out.println("\t\t" + strTockenValue);
 		System.out
 				.println("\n---------------Written by Ramesh----------------------");
 	}
 
-	static String missingWords(String s, String t) {
+	static String missingWords(String strFileReadItem, String strRemoved) {
+		
 		List<String> words = new ArrayList<>();
-		String[] tTokens = t.split(" ");
-		String[] sTokens = s.split(" ");
+		String[] tTokens = strRemoved.split(" ");
+		String[] sTokens = strFileReadItem.split(" ");
 
 		for (int i = 0, j = 0; i < sTokens.length; i++) {
 			if (!sTokens[i].trim().equals(tTokens[j].trim())) {
@@ -109,8 +126,6 @@ public class StringParser {
 				}
 			}
 		}
-		System.out
-				.println("\n----------------"+words);
 		String str4 = Arrays.toString(words.toArray());
 		str4 = str4.replaceAll(",", "").replace("[", "").replace("]", "");
 		return str4;
