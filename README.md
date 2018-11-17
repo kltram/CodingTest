@@ -3,6 +3,57 @@
 ##### Task_1) String parsing:: Read the whitelist from the file. Each line in a whitelist is an individual parser. A program should ask a user to send a test, find the exact parser that match the user response and returns the token value from the user response. 
 example: ![Task 1](/images/Task1.png)
 
+####	Step 0: 
+			open the command prompt (Click the Start button (Windows)--> type cmd -->select and open the "Command prombt" )
+####	Step 1: 
+			> git clone https://github.com/kltram/CodingTest
+####	Step 2: 
+			> cd CodingTest\task1\stringparser>
+####	Step 3: 
+			> CodingTest\task1\stringparser>javac StringParser.java
+####	Step 4: 
+			> CodingTest\task1\stringparser>java StringParser
+
+### Sample Output  :1
+
+####		Please Enter your input: can you translate Ramesh name in chinese
+
+####		The expected returns token value from the user response
+
+####		-------------------------------------------------------
+
+####				Ramesh name
+
+####		---------------Written by Ramesh----------------------
+
+### Sample Output  :2
+
+####		CodingTest\task1\stringparser>java StringParser
+			
+####		Please Enter your input:  i want to translate By Ramesh
+
+####		The expected returns token value from the user response
+
+####		-------------------------------------------------------
+
+####						 By Ramesh
+
+####		---------------Written by Ramesh----------------------
+
+### Sample Output  :3
+
+####		CodingTest\task1\stringparser>java StringParser
+####		Please Enter your input: how can i say it in chinese task 1
+
+####		The expected returns token value from the user response
+
+####		-------------------------------------------------------
+
+####						task 1
+
+####		---------------Written by Ramesh----------------------
+			
+
 ##### Task_2) Binary Tree Traversal: write a program to perform InOrder tree traversal in [Binary Tree](https://en.wikipedia.org/wiki/Tree_traversal).
 	
 ###	Program Execution Steps
