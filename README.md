@@ -16,6 +16,8 @@ example: ![Task 1](/images/Task1.png)
 
 ### Sample Output  :1
 
+####		CodingTest\task1\stringparser>java StringParser
+
 ####		Please Enter your input: can you translate Ramesh name in chinese
 
 ####		The expected returns token value from the user response
